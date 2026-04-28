@@ -1,10 +1,9 @@
-
 import { skills } from "@/constants/skills";
 import Badge from "../ui/Badge";
 
-export default function ResumeSection() {
+export default function SkillsSection() {
     return (
-        <section className="mt-10">
+        <section>
             <h2 className="text-xl font-semibold mb-4">Skills</h2>
 
             <div className="flex flex-wrap gap-2">

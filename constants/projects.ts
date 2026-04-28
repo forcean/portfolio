@@ -4,14 +4,16 @@ export const projects: Project[] = [
     {
         slug: "autoservicepro",
         title: "AutoServicePro",
-        desc: "Full-stack service management platform with Microservices architecture",
-        images: [
-            "/projects/auto-1.png",
-            "/projects/auto-2.png",
-            "/projects/auto-3.png",
-        ],
+        desc: "Platform for managing service operations",
+        images: ["/projects/auto-1.png", "/projects/auto-2.png"],
         techStack: ["Angular", "NestJS", "MongoDB"],
-        github: "https://github.com/your",
+        features: [
+            "User authentication with JWT",
+            "Real-time booking system",
+            "Admin dashboard",
+        ],
+        github: "https://github.com/xxx",
+        demoUrl: "https://xxx.vercel.app"
     },
     {
         slug: "flood-alert",
@@ -22,5 +24,12 @@ export const projects: Project[] = [
             "/projects/flood-2.png",
         ],
         techStack: ["Node-RED", "Arduino"],
+        features: [
+            "Real-time water level monitoring",
+            "Automated LINE notifications",
+            "Historical data logging",
+        ],
+        github: "https://github.com/xxx",
+        demoUrl: "https://xxx.vercel.app"
     },
 ];
