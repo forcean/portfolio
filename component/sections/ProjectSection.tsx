@@ -7,21 +7,23 @@ import { projects } from "@/constants/projects";
 import ProjectCard from "../features/project/ProjectCard";
 
 export default function ProjectSection() {
-    const container = useRef(null);
+    const container = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
         const ctx = gsap.context(() => {
-            gsap.from(".project-card", {
+            const cards = gsap.utils.toArray<HTMLElement>(".project-item");
+
+            gsap.from(cards, {
                 scrollTrigger: {
                     trigger: container.current,
-                    start: "top 80%",
+                    start: "top 75%",
                 },
-                y: 80,
+                y: 60,
                 opacity: 0,
-                stagger: 0.2,
-                duration: 1,
+                stagger: 0.15,
+                duration: 0.8,
                 ease: "power3.out",
             });
         }, container);
@@ -35,7 +37,9 @@ export default function ProjectSection() {
 
             <div className="grid md:grid-cols-2 gap-6">
                 {projects.map((p) => (
-                    <ProjectCard key={p.slug} project={p} />
+                    <div key={p.slug} className="project-item">
+                        <ProjectCard project={p} />
+                    </div>
                 ))}
             </div>
         </section>
