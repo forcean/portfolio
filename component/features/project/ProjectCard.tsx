@@ -20,7 +20,7 @@ export default function ProjectCard({
         hover:-translate-y-2
       "
       >
-        {/* 🔥 Glow Hover */}
+        {/*Glow Hover */}
         <div
           className="
           absolute inset-0 opacity-0 group-hover:opacity-100
