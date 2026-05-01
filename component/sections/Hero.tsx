@@ -2,7 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
@@ -11,15 +14,14 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      tl.from(".hero-badge", { y: 20, opacity: 0, duration: 0.6 })
-        .from(".hero-title", {
-          y: 100,
-          opacity: 0,
-          duration: 1.2,
-          ease: "power4.out",
-        })
+      tl.from(".hero-title", {
+        y: 120,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out",
+      })
         .from(".hero-sub", {
-          y: 50,
+          y: 60,
           opacity: 0,
           duration: 1,
         }, "-=0.7")
@@ -28,21 +30,46 @@ export default function Hero() {
           opacity: 0,
           duration: 0.8,
           stagger: 0.1,
-        }, "-=0.6")
-        .from(".hero-bg", {
-          opacity: 0,
-          scale: 1.2,
-          duration: 1.5,
-        }, "-=1.5");
+        }, "-=0.6");
+
+      // 🔥 parallax background
+      gsap.to(".hero-bg", {
+        y: 150,
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // 🔥 floating glow
+      gsap.to(".glow-1", {
+        x: 60,
+        y: 40,
+        duration: 6,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      gsap.to(".glow-2", {
+        x: -50,
+        y: -30,
+        duration: 8,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
     }, container);
 
     return () => ctx.revert();
   }, []);
 
-  // 🔥 smooth scroll
   const handleScroll = () => {
-    const nextSection = document.getElementById("highlights");
-    nextSection?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("highlights")?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -52,12 +79,12 @@ export default function Hero() {
     >
       {/* BG */}
       <div className="hero-bg absolute inset-0 -z-10">
-        <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/20 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-purple-500/20 blur-[120px] rounded-full" />
+        <div className="glow-1 absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/20 blur-[120px] rounded-full" />
+        <div className="glow-2 absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-purple-500/20 blur-[120px] rounded-full" />
       </div>
 
-      <div className="hero-badge mb-4 px-4 py-1 text-sm bg-white/5 border border-white/10 rounded-full backdrop-blur">
-        🚀 Available for work
+      <div className="mb-4 px-4 py-1 text-sm bg-white/5 border border-white/10 rounded-full backdrop-blur">
+        Available for work
       </div>
 
       <h1 className="hero-title text-5xl md:text-7xl font-bold leading-tight">
@@ -88,10 +115,9 @@ export default function Hero() {
         </Link>
       </div>
 
-      {/* 👇 clickable scroll */}
       <button
         onClick={handleScroll}
-        className="absolute bottom-10 text-gray-500 text-sm animate-bounce"
+        className="absolute bottom-20 md:bottom-24 text-gray-400 text-sm animate-bounce opacity-80 hover:opacity-100 transition"
       >
         ↓ Scroll
       </button>
