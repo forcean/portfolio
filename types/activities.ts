@@ -1,5 +1,6 @@
-export type Activities = {
+export interface Activities {
     title: string;
     desc: string;
-    image: string;
-};
+    image?: string;
+    images?: string[];
+}

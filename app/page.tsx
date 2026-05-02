@@ -1,15 +1,18 @@
-import ActivitiesSection from "@/component/sections/ActivitiesSection";
 import Hero from "@/component/sections/Hero";
 import HighlightsSection from "@/component/sections/HighlightsSection";
-import ProjectSection from "@/component/sections/ProjectSection";
+import ActivitiesSection from "@/component/sections/ActivitiesSection";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
+    <>
       <Hero />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
       <HighlightsSection />
+
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
       <ActivitiesSection />
-      {/* <ProjectSection /> */}
-    </main>
+    </>
   );
 }

@@ -313,10 +313,11 @@ export default function ContactPage() {
                 <p className="text-sm text-gray-500">LinkedIn</p>
 
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/annop-srichan-521211346"
+                  target="_blank"
                   className="text-lg hover:text-blue-400 transition"
                 >
-                  linkedin.com/in/yourprofile
+                  linkedin.com/in/annop-srichan
                 </a>
               </div>
             </div>
