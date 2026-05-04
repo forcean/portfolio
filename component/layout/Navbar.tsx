@@ -9,7 +9,7 @@ export default function Navbar() {
                 {/* LEFT: LOGO */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <img
-                        src="/logo.jpg"
+                        src="/logo.png"
                         alt="logo"
                         className="w-8 h-8 object-contain group-hover:scale-110 transition"
                     />

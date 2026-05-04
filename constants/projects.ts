@@ -1,160 +1,186 @@
 import { Project } from "@/types/project";
 
 export const projects: Project[] = [
-    // ================= AUTO SERVICE PRO =================
+    // AutoServicePro
     {
         slug: "autoservicepro",
         title: "AutoServicePro",
         shortDesc:
-            "Full-stack service management platform with modern scalable architecture.",
+            "Service management system with complex workflows and frontend-driven architecture design.",
+
         desc:
-            "AutoServicePro is a full-stack web application designed to manage automotive service operations. It includes booking systems, shop management, and customer interactions. The project focuses on clean architecture, reusable frontend components, and scalable backend design.",
+            "AutoServicePro is a full-stack service management system designed for automotive service operations. I was responsible for frontend development and overall system design, including defining business workflows, API structures, and data models. The system handles repair processes, stock management, and billing workflows with a focus on scalability and maintainability. Designed the core system architecture where Repair Order acts as the central entity connecting stock movements, billing, and service history.",
 
         coverImage: "/projects/auto-cover.png",
         images: [
             "/projects/auto-1.png",
             "/projects/auto-2.png",
             "/projects/auto-3.png",
+            "/projects/auto-4.png",
+            "/projects/auto-5.png",
+            "/projects/auto-6.png",
+            "/projects/auto-7.png",
+            "/projects/auto-8.png",
+            "/projects/auto-9.png",
+            "/projects/auto-10.png",
+            "/projects/auto-11.png",
+            "/projects/auto-12.png",
+            "/projects/auto-13.png",
         ],
 
         techStack: [
             "Angular",
+            "TypeScript",
+            "SCSS",
             "NestJS",
             "MongoDB",
-            "TypeScript",
-            "Docker",
             "JWT",
-            "SCSS",
         ],
 
         features: [
-            "JWT authentication with role-based authorization",
-            "Shop and service management system",
-            "Real-time booking and appointment handling",
-            "Dynamic product and category management",
-            "Image upload system with gallery support",
-            "Responsive UI with reusable components",
+            "JWT authentication with role-based authorization (RBAC)",
+            "Repair order workflow management (create, assign, track status)",
+            "Quotation system for complex repair cases",
+            "Integrated billing system linked with repair and stock data",
+            "Stock management with movement tracking (IN / OUT / ADJUST)",
+            "Automatic bill generation from stock usage with manual adjustments",
+            "Vehicle management and service history tracking",
+            "Advanced image upload system (profile + gallery, multi-image support)",
+            "Complex reactive forms with dynamic validation (Angular)",
+            "Reusable and modular Angular component architecture",
         ],
 
         challenges: [
-            "Designing scalable backend structure with NestJS",
-            "Handling complex form states with Angular Reactive Forms",
-            "Managing image upload and update workflows",
+            "Designing end-to-end business workflow (repair → stock → billing)",
+            "Defining scalable API structure and data relationships across modules",
+            "Managing complex reactive forms and dynamic UI states in Angular",
+            "Handling image upload workflows (add, delete, sync existing data)",
+            "Ensuring data consistency between frontend state and backend systems",
         ],
 
         learnings: [
-            "Improved full-stack architecture design",
-            "Better understanding of Angular state management",
-            "Hands-on experience with REST API design",
+            "Strong understanding of system design and business workflow modeling",
+            "Experience designing API contracts and database structure before implementation",
+            "Advanced usage of Angular Reactive Forms for complex applications",
+            "Improved ability to translate real-world processes into scalable software systems",
         ],
 
         duration: "3 Months",
-        role: "Full-stack Developer",
+        role: "Front-end Developer & System Designer",
         github: "https://github.com/xxx",
         demoUrl: "https://xxx.vercel.app",
     },
 
-    // ================= AMID MARKETPLACE =================
+    // AMID Marketplace
     {
-        slug: "amid",
-        title: "AMID Marketplace",
-        shortDesc:
-            "Marketplace platform for connecting service providers and customers.",
-        desc:
-            "AMID is a marketplace platform that connects users with service providers. This project focuses on high-performance frontend development, relational database modeling, and automated deployment pipelines.",
+        "slug": "amid",
+        "title": "AMID Marketplace",
+        "shortDesc": "Marketplace platform with a focus on system integration, containerization, and modern UI/UX.",
+        "desc": "A centralized service marketplace developed during my internship at Entronica Co., Ltd. While focusing on the Front-end experience with Angular, I also served as the Integration and Infrastructure Lead. I was responsible for designing the system architecture, optimizing database schemas, and orchestrating microservices using Docker to ensure a seamless connection between the front-end and back-end services.",
 
-        coverImage: "/projects/amid-cover.png",
-        images: [
+        "coverImage": "/projects/amid-cover.png",
+        "images": [
             "/projects/amid-1.png",
             "/projects/amid-2.png",
             "/projects/amid-3.png",
+            "/projects/amid-4.png",
+            "/projects/amid-5.png",
+            "/projects/amid-6.png",
+            "/projects/amid-7.png",
+            "/projects/amid-8.png",
         ],
 
-        techStack: [
-            "Angular",
-            "PostgreSQL",
+        "techStack": [
+            "Angular (Front-end)",
             "TypeScript",
-            "RxJS",
-            "CI/CD",
-            "Node.js (Express)",
+            "Docker & Docker Compose",
+            "CI/CD Pipelines",
+            "PostgreSQL & MongoDB (Schema Design)",
+            "NGINX (Reverse Proxy)",
+            "Minio (Object Storage)",
+            "Google Maps API"
         ],
 
-        features: [
-            "Interactive shop listing and search with debounce (RxJS)",
-            "Efficient relational database schema design (PostgreSQL)",
-            "Automated CI/CD pipeline for build and deployment",
-            "Category and keyword-based filtering system",
-            "Responsive UI using reusable Angular components",
+        "features": [
+            "Developed a responsive user interface using Angular for both customers and service partners.",
+            "Architected system orchestration using Docker Compose to manage multiple services including API, Web, and DB.",
+            "Designed and implemented the Database Schema for PostgreSQL and MongoDB to support complex service data.",
+            "Integrated NGINX as a Reverse Proxy to handle routing for Web, API, and File Management Services (FMS).",
+            "Implemented location-based shop discovery with Google Maps API and synchronized OAuth2 authentication.",
+            "Established automated CI/CD processes for streamlined development and deployment."
         ],
 
-        challenges: [
-            "Optimizing frontend search performance with RxJS operators",
-            "Designing a flexible relational data model for shops and services",
-            "Automating deployment workflows to ensure reliable updates",
+        "challenges": [
+            "Bridging Front-end requirements with Back-end services through effective System Integration and API contracts.",
+            "Managing complex service orchestration and maintaining environment consistency using Docker.",
+            "Configuring secure routing and load balancing between decoupled microservices via NGINX."
         ],
 
-        learnings: [
-            "Deep understanding of relational database design (PostgreSQL)",
-            "Mastering CI/CD concepts for modern web applications",
-            "Improved frontend-backend integration and architecture patterns",
+        "learnings": [
+            "Advanced proficiency in system orchestration and DevOps practices within a professional team environment.",
+            "Expertise in translating technical requirements into functional Sequence Diagrams and Database Designs.",
+            "Hands-on experience in Full-stack integration, focusing on the synergy between Front-end and Infrastructure."
         ],
 
-        duration: "2 Months",
-        role: "Front-end Developer & System Architect",
-        github: "https://github.com/xxx",
-        demoUrl: "https://xxx.vercel.app",
+        "duration": "6 Months (Internship)",
+        "role": "Software Developer Intern",
+        "github": "https://github.com/xxx",
+        "demoUrl": "https://xxx.vercel.app"
     },
 
-    // ================= OMS (SYSTEM DESIGN & RESEARCH) =================
+    // Order Management System (OMS)
     {
         slug: "oms",
         title: "Order Management System (OMS)",
         shortDesc:
-            "Technical design and research for an enterprise order management system.",
+            "Architectural design for an enterprise-grade order management and stock synchronization system.",
         desc:
-            "A research-driven project focused on designing a structured backend for managing enterprise operations. This project served as a foundation for understanding clean architecture, modular system design, and role-based access control before implementation.",
+            "Conducted in-depth technical research and architectural design for an Order Management System (OMS) at Entronica Co., Ltd. The project focused on solving complex operational challenges for shop owners, such as multi-channel sales integration and automated stock synchronization. I designed the system's operational flow, from order intake via external platforms (TikTok, Shopee, Lazada) to fulfillment and delivery tracking.",
 
         coverImage: "/projects/oms-cover.png",
         images: [
             "/projects/oms-1.png",
             "/projects/oms-2.png",
             "/projects/oms-3.png",
+            "/projects/oms-4.png",
+            "/projects/oms-5.png",
         ],
 
         techStack: [
             "System Design",
-            "NestJS",
-            "TypeScript",
-            "Architecture Research",
-            "ER Diagram",
+            "Flowchart Architecture",
+            "API Integration Research",
+            "Marketplace API (Shopee/Lazada/TikTok)",
+            "Inventory Management Logic",
         ],
 
         features: [
-            "Conceptual modular backend architecture design",
-            "Planned role-based access control (RBAC) logic",
-            "Designed API specifications and data validation patterns",
-            "Researched scalable database structures for reporting",
+            "Designed end-to-end Order Flow: Order Intake → Stock Check → Fulfillment → Shipping",
+            "Conceptualized multi-channel synchronization for stock and price updates",
+            "Integrated logic for external delivery provider tracking and status updates",
+            "Dashboard and Reporting design for real-time sales and inventory insights",
+            "Planned modular architecture to support future scaling and platform integrations",
         ],
 
         challenges: [
-            "Designing a maintainable and decoupled module structure",
-            "Defining complex permission logic and user workflows",
-            "Balancing system flexibility with strict data validation requirements",
+            "Designing a unified data model that fits various marketplace API structures",
+            "Mapping complex state transitions for orders (Pending, Packed, Shipped, Returned)",
+            "Balancing real-time synchronization requirements with API rate limits",
         ],
 
         learnings: [
-            "Strong theoretical foundation in NestJS and clean architecture",
-            "Best practices in API documentation and design (DTOs/Validators)",
-            "Strategic thinking in system scalability and modularity",
+            "Deep understanding of Enterprise Resource Planning (ERP) and OMS workflows",
+            "Experience in strategic system planning and business process modeling",
+            "Knowledge of marketplace ecosystem integrations and logistics automation",
         ],
 
-        duration: "1.5 Months",
-        role: "System Designer (Research & Design)",
+        duration: "4 Months (Internship Research Phase)",
+        role: "Software Developer Intern (System Designer)",
         github: "https://github.com/xxx",
         demoUrl: "",
     },
 
-    // ================= FLOOD ALERT SYSTEM =================
+    // Flood Alert System (IoT)
     {
         slug: "flood-alert",
         title: "Flood Alert System",
@@ -168,6 +194,7 @@ export const projects: Project[] = [
             "/projects/flood-1.png",
             "/projects/flood-2.png",
             "/projects/flood-3.png",
+            "/projects/flood-4.png",
         ],
 
         techStack: [
@@ -204,7 +231,7 @@ export const projects: Project[] = [
         demoUrl: "",
     },
 
-    // ================= PYGAME OOP GAME =================
+    // Pygame OOP Game
     {
         slug: "pygame-game",
         title: "2D Game with Pygame (OOP)",
@@ -218,6 +245,9 @@ export const projects: Project[] = [
             "/projects/game-1.png",
             "/projects/game-2.png",
             "/projects/game-3.png",
+            "/projects/game-4.png",
+            "/projects/game-5.png",
+            "/projects/game-6.png",
         ],
 
         techStack: [
@@ -228,27 +258,30 @@ export const projects: Project[] = [
 
         features: [
             "Object-oriented game architecture",
-            "Player movement and controls",
-            "Enemy AI behavior system",
-            "Collision detection",
-            "Game loop and state management",
+            "Tile-based level system with walls and collision boundaries",
+            "Player movement with directional sprite animation",
+            "Basic enemy AI and interaction system",
+            "Collision detection and hit cooldown mechanics",
+            "Game loop and state management (Game Over / Win)",
         ],
 
         challenges: [
-            "Designing reusable OOP structure",
-            "Managing game states and transitions",
-            "Handling real-time rendering performance",
+            "Designing reusable OOP structure for game entities",
+            "Handling collision detection with map boundaries",
+            "Managing smooth player movement and input handling",
+            "Implementing game state transitions (menu, gameplay, end)",
         ],
 
         learnings: [
-            "Strong OOP fundamentals",
-            "Game loop and rendering concepts",
-            "Problem-solving in real-time systems",
+            "Strong OOP design in game development",
+            "Understanding real-time game loops and rendering",
+            "Handling state management in interactive applications",
+            "Working with sprite animations and collision systems",
         ],
 
         duration: "1 Month",
         role: "Game Developer",
-        github: "https://github.com/xxx",
+        github: "https://github.com/forcean/project-oop",
         demoUrl: "",
     },
 ];
