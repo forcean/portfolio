@@ -1,0 +1,64 @@
+{
+  "Hero": {
+    "badge": "พร้อมร่วมงาน",
+    "title1": "สร้างสรรค์",
+    "title2": "ประสบการณ์เว็บสมัยใหม่",
+    "subtitle": "ผมคือ Annop — Full-stack Developer เชี่ยวชาญ Angular, NestJS และ scalable architecture",
+    "projects": "ดูโปรเจกต์",
+    "contact": "ติดต่อผม",
+    "scroll": "↓ เลื่อนลง"
+  },
+  "navbar": {
+    "home": "หน้าแรก",
+    "projects": "ผลงาน",
+    "resume": "เรซูเม่",
+    "contact": "ติดต่อ"
+  },
+  "highlights": {
+    "title": "มากกว่าแค่การเขียนโค้ด",
+    "subtitle": "Beyond Development",
+    "description": "ประสบการณ์ แนวคิด และวิธีคิดเชิงวิศวกรรมที่มากกว่าการเขียนโปรแกรม",
+    "items": [
+      {
+        "title": "ประสบการณ์ฝึกงาน",
+        "desc": "พัฒนา Angular frontend และ CI/CD"
+      },
+      {
+        "title": "เกรดวิศวกรรม",
+        "desc": "รักษา GPA 3.79 อย่างสม่ำเสมอ"
+      },
+      {
+        "title": "โปรเจกต์ Full-stack",
+        "desc": "พัฒนาด้วย Angular, NestJS, MongoDB"
+      },
+      {
+        "title": "System Design",
+        "desc": "เน้น scalability และ clean architecture"
+      },
+      {
+        "title": "Problem Solving",
+        "desc": "แก้บั๊กและ optimize ระบบได้ดี"
+      },
+      {
+        "title": "Teamwork",
+        "desc": "ทำงานแบบ Agile และใช้ Git"
+      }
+    ]
+  },
+  "activities": {
+    "title": "กิจกรรมและประสบการณ์",
+    "subtitle": "การพัฒนาความคิดสร้างสรรค์ ธุรกิจ และการทำงานเป็นทีม นอกเหนือจากการเขียนโค้ด",
+    "startup": {
+      "title": "แข่งขัน Startup",
+      "desc": "นำเสนอไอเดียธุรกิจ วิเคราะห์โมเดล และพรีเซนต์ต่อกรรมการ"
+    },
+    "youtube": {
+      "title": "YouTube Creator",
+      "desc": "สร้างคอนเทนต์สอนเขียนโปรแกรมและแบ่งปันความรู้"
+    },
+    "hackathon": {
+      "title": "Hackathon",
+      "desc": "ทำงานเป็นทีมเพื่อสร้างโปรเจคภายในเวลาจำกัด"
+    }
+  }
+}

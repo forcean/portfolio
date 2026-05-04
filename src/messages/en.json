@@ -1,0 +1,64 @@
+{
+  "Hero": {
+    "badge": "Available for work",
+    "title1": "Building Modern",
+    "title2": "Web Experiences",
+    "subtitle": "I’m Annop — Full-stack Developer specializing in Angular, NestJS & scalable modern architecture.",
+    "projects": "View Projects",
+    "contact": "Contact Me",
+    "scroll": "↓ Scroll"
+  },
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "highlights": {
+    "title": "Beyond Coding",
+    "subtitle": "Beyond Development",
+    "description": "Experience, mindset, and engineering values beyond just writing code.",
+    "items": [
+      {
+        "title": "Internship Experience",
+        "desc": "Worked on Angular frontend and CI/CD pipelines."
+      },
+      {
+        "title": "Engineering GPA",
+        "desc": "Maintained GPA 3.79 with consistency."
+      },
+      {
+        "title": "Full-stack Projects",
+        "desc": "Built systems using Angular, NestJS, MongoDB."
+      },
+      {
+        "title": "System Design",
+        "desc": "Focused on scalability and clean architecture."
+      },
+      {
+        "title": "Problem Solving",
+        "desc": "Strong debugging and optimization skills."
+      },
+      {
+        "title": "Teamwork",
+        "desc": "Experience in Agile and Git workflows."
+      }
+    ]
+  },
+  "activities": {
+    "title": "Activities & Experiences",
+    "subtitle": "Exploring creativity, entrepreneurship, leadership, and teamwork beyond coding and software engineering.",
+    "startup": {
+      "title": "Startup Competition",
+      "desc": "Pitching startup ideas, validating business models, and presenting solutions to judges."
+    },
+    "youtube": {
+      "title": "YouTube Creator",
+      "desc": "Creating educational programming content and sharing development knowledge."
+    },
+    "hackathon": {
+      "title": "Hackathon",
+      "desc": "Collaborating with teams to build innovative solutions under time constraints."
+    }
+  }
+}
