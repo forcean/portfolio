@@ -73,5 +73,45 @@
     "email": "Email",
     "phone": "Phone",
     "linkedin": "LinkedIn"
+  },
+  "resume": {
+    "badge": "Resume & Experience",
+    "download": "Download CV",
+    "contact": "Contact Me",
+    "role": "Software Developer",
+    "subtitle": "Frontend Specialist | Angular • NestJS • System Architecture",
+    "summary": "High-achieving Electronics and Computer Systems Engineering student (GPA 3.79). Specialized in Frontend Development with Angular, with strong foundations in Backend (NestJS) and System Architecture. Experienced in designing scalable workflows and implementing CI/CD pipelines.",
+    "stats": {
+      "projects": "Projects",
+      "tech": "Tech Stack",
+      "gpa": "GPA",
+      "exp": "Experience"
+    },
+    "about": "About Me",
+    "skills": "Skills",
+    "achievementsTitle": "Achievements",
+    "experienceTitle": "Experience",
+    "projectsTitle": "Featured Projects",
+    "educationTitle": "Education",
+    "exp": {
+      "role": "Software Developer Intern",
+      "period": "April 2025 - October 2025",
+      "desc1": "Developed responsive frontend applications using Angular and TypeScript.",
+      "desc2": "Built reusable UI components and managed complex state within the service structure.",
+      "desc3": "Integrated frontend services with RESTful APIs and optimized system workflows.",
+      "desc4": "Collaborated in an Agile environment, participating in Sprint planning and reviews.",
+      "desc5": "Gained hands-on experience with CI/CD pipelines and version control (Git)."
+    },
+    "edu": {
+      "degree": "Bachelor of Engineering (Electronics and Computer Systems)",
+      "extra": "Expected Graduation: April 2026"
+    },
+    "achievementList": [
+      "Top 5 Representative - Startup Thailand League 2026 (Project: Morph)",
+      "System Architect - AutoServicePro: Designed MongoDB schema and system workflows",
+      "Developed AMID: A centralized service marketplace platform",
+      "Expertise in Frontend-Heavy Full-stack: Angular, NestJS, and Microservices",
+      "Strong foundation in Hardware-Software integration (Microcontrollers)"
+    ]
   }
 }

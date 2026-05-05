@@ -73,5 +73,45 @@
     "email": "อีเมล",
     "phone": "เบอร์โทร",
     "linkedin": "LinkedIn"
+  },
+  "resume": {
+    "badge": "ประวัติและประสบการณ์",
+    "download": "ดาวน์โหลดเรซูเม่",
+    "contact": "ติดต่อฉัน",
+    "role": "นักพัฒนาซอฟต์แวร์",
+    "subtitle": "ผู้เชี่ยวชาญ Frontend | Angular • NestJS • System Architecture",
+    "summary": "นักศึกษาวิศวกรรมอิเล็กทรอนิกส์และคอมพิวเตอร์ (เกรดเฉลี่ย 3.79) มีความเชี่ยวชาญด้าน Frontend ด้วย Angular และมีพื้นฐาน Backend (NestJS) และ System Architecture ออกแบบระบบ scalable และมีประสบการณ์ CI/CD",
+    "stats": {
+      "projects": "โปรเจกต์",
+      "tech": "เทคโนโลยี",
+      "gpa": "เกรดเฉลี่ย",
+      "exp": "ประสบการณ์"
+    },
+    "about": "เกี่ยวกับฉัน",
+    "skills": "ทักษะ",
+    "achievementsTitle": "ผลงาน",
+    "experienceTitle": "ประสบการณ์",
+    "projectsTitle": "โปรเจกต์เด่น",
+    "educationTitle": "การศึกษา",
+    "exp": {
+      "role": "นักพัฒนาซอฟต์แวร์ฝึกงาน",
+      "period": "เมษายน 2025 - ตุลาคม 2025",
+      "desc1": "พัฒนา Frontend ด้วย Angular และ TypeScript",
+      "desc2": "สร้าง UI Component ที่ reusable และจัดการ state",
+      "desc3": "เชื่อมต่อ REST API และปรับปรุง workflow",
+      "desc4": "ทำงานแบบ Agile (Sprint / Review)",
+      "desc5": "มีประสบการณ์ CI/CD และ Git"
+    },
+    "edu": {
+      "degree": "วิศวกรรมศาสตร์ (อิเล็กทรอนิกส์และคอมพิวเตอร์)",
+      "extra": "คาดว่าจะจบ: เมษายน 2026"
+    },
+    "achievementList": [
+      "ตัวแทน Top 5 - Startup Thailand League 2026 (โปรเจกต์ Morph)",
+      "System Architect - ออกแบบ MongoDB และ workflow",
+      "พัฒนา AMID แพลตฟอร์ม marketplace",
+      "เชี่ยวชาญ Full-stack (Angular, NestJS, Microservices)",
+      "พื้นฐาน Hardware-Software Integration"
+    ]
   }
 }
