@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 import {
   Mail,
@@ -13,6 +14,7 @@ import {
 
 export default function ContactPage() {
   const container = useRef<HTMLDivElement>(null);
+  const t = useTranslations("contact");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -40,290 +42,152 @@ export default function ContactPage() {
       ref={container}
       className="
         relative min-h-screen
+        flex items-center justify-center
+        px-5 sm:px-6 lg:px-8
+        py-20 md:py-28
         overflow-hidden
-        flex items-center
-        justify-center
-        px-6 py-24
       "
     >
-      {/* BG Glow */}
-
+      {/* BG */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div
-          className="
-            contact-glow
-            absolute top-[-100px] left-1/2 -translate-x-1/2
-            w-[700px] h-[700px]
-            bg-blue-500/20
-            blur-[140px]
-            rounded-full
-          "
-        />
-
-        <div
-          className="
-            absolute bottom-[-150px] right-[-100px]
-            w-[500px] h-[500px]
-            bg-purple-500/20
-            blur-[140px]
-            rounded-full
-          "
-        />
+        <div className="contact-glow absolute top-[-120px] left-1/2 -translate-x-1/2 w-[600px] md:w-[700px] h-[600px] md:h-[700px] bg-blue-500/20 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-150px] right-[-100px] w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-purple-500/20 blur-[140px] rounded-full" />
       </div>
 
-      {/* Main Card */}
+      <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
 
-      <div
-        className="
-          w-full max-w-6xl
-          grid lg:grid-cols-2
-          gap-10
-          items-center
-        "
-      >
-        {/* Left Content */}
-        <div className="space-y-8">
-          {/* Badge */}
-          <div
-            className="
-              contact-reveal
-              inline-flex items-center gap-2
-              px-4 py-2
-              rounded-full
-              bg-white/5 border border-white/10
-              backdrop-blur
-              text-sm text-gray-300
-            "
-          >
-            Available for Work
+        {/* Left */}
+        <div className="space-y-8 text-center lg:text-left">
+
+          {/* badge */}
+          <div className="contact-reveal inline-flex mx-auto lg:mx-0 items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur text-sm text-gray-300">
+            {t("badge")}
           </div>
 
-          {/* Title */}
+          {/* title */}
           <div className="contact-reveal">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Let&apos;s Build{" "}
-              <span
-                className="
-                  bg-gradient-to-r
-                  from-blue-400
-                  to-purple-500
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                Something Amazing
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
+              {t("title1")}{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                {t("title2")}
               </span>
             </h1>
 
-            <p className="text-gray-400 mt-6 text-lg max-w-xl leading-relaxed">
-              I’m currently open to internships, full-time opportunities,
-              freelance projects, and startup collaborations.
+            <p className="text-gray-400 mt-6 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              {t("desc")}
             </p>
           </div>
 
-          {/* Buttons */}
-          <div className="contact-reveal flex flex-wrap gap-4">
+          {/* buttons */}
+          <div className="contact-reveal flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
             <a
               href="mailto:annopsrichan@gmail.com"
-              className="
-                px-6 py-4 rounded-2xl
-                bg-blue-500
-                hover:scale-105
-                transition
-                shadow-lg shadow-blue-500/30
-                flex items-center gap-3
-              "
+              className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-blue-500 hover:scale-105 transition shadow-lg shadow-blue-500/30 flex items-center justify-center gap-3"
             >
-              Send Email
+              {t("sendEmail")}
               <ArrowUpRight size={20} />
             </a>
 
             <a
               href="https://github.com/forcean"
               target="_blank"
-              className="
-                px-6 py-4 rounded-2xl
-                bg-white/10 border border-white/10
-                hover:bg-white/20
-                transition
-                flex items-center gap-3
-              "
+              className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-white/10 border border-white/10 hover:bg-white/20 transition flex items-center justify-center gap-3"
             >
               <GitBranch size={20} />
-              GitHub
+              {t("github")}
             </a>
           </div>
         </div>
 
-        {/* Right Card */}
-        <div
-          className="
-            contact-reveal
-            relative
-            bg-white/5
-            border border-white/10
-            backdrop-blur-2xl
-            rounded-[32px]
-            p-8 md:p-10
-            overflow-hidden
-          "
-        >
-          {/* glow */}
-          <div
-            className="
-              absolute top-0 right-0
-              w-40 h-40
-              bg-blue-500/10
-              blur-[80px]
-              rounded-full
-            "
-          />
+        {/* Right */}
+        <div className="contact-reveal relative bg-white/5 border border-white/10 backdrop-blur-2xl rounded-[28px] md:rounded-[32px] p-6 sm:p-8 md:p-10">
 
-          {/* title */}
-          <div className="mb-10">
-            <p className="text-blue-400 uppercase tracking-[0.2em] text-sm">
-              Contact Information
+          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[80px] rounded-full" />
+
+          <div className="mb-8">
+            <p className="text-blue-400 uppercase tracking-[0.2em] text-xs md:text-sm">
+              {t("infoTitle")}
             </p>
 
-            <h2 className="text-3xl font-bold mt-3">
-              Get In Touch
+            <h2 className="text-2xl md:text-3xl font-bold mt-2">
+              {t("infoSubtitle")}
             </h2>
           </div>
 
-          {/* Contact List */}
-          <div className="space-y-6">
+          <div className="space-y-5">
+
             {/* email */}
-            <div
-              className="
-                flex items-center gap-5
-                p-5 rounded-2xl
-                bg-white/5 border border-white/10
-                hover:border-blue-400/30
-                transition
-              "
-            >
-              <div
-                className="
-                  w-14 h-14 rounded-2xl
-                  bg-blue-500/20
-                  flex items-center justify-center
-                  text-blue-400
-                "
-              >
-                <Mail size={24} />
-              </div>
-
-              <div>
-                <p className="text-sm text-gray-500">Email</p>
-
-                <a
-                  href="mailto:annopsrichan@gmail.com"
-                  className="text-lg hover:text-blue-400 transition"
-                >
-                  annopsrichan@gmail.com
-                </a>
-              </div>
-            </div>
+            <ContactItem
+              icon={<Mail />}
+              label={t("email")}
+              value="annopsrichan@gmail.com"
+              link="mailto:annopsrichan@gmail.com"
+            />
 
             {/* phone */}
-            <div
-              className="
-                flex items-center gap-5
-                p-5 rounded-2xl
-                bg-white/5 border border-white/10
-                hover:border-blue-400/30
-                transition
-              "
-            >
-              <div
-                className="
-                  w-14 h-14 rounded-2xl
-                  bg-purple-500/20
-                  flex items-center justify-center
-                  text-purple-400
-                "
-              >
-                <Phone size={24} />
-              </div>
-
-              <div>
-                <p className="text-sm text-gray-500">Phone</p>
-
-                <p className="text-lg">
-                  096-659-0527
-                </p>
-              </div>
-            </div>
+            <ContactItem
+              icon={<Phone />}
+              label={t("phone")}
+              value="096-659-0527"
+            />
 
             {/* github */}
-            <div
-              className="
-                flex items-center gap-5
-                p-5 rounded-2xl
-                bg-white/5 border border-white/10
-                hover:border-blue-400/30
-                transition
-              "
-            >
-              <div
-                className="
-                  w-14 h-14 rounded-2xl
-                  bg-white/10
-                  flex items-center justify-center
-                "
-              >
-                <GitBranch size={24} />
-              </div>
-
-              <div>
-                <p className="text-sm text-gray-500">GitHub</p>
-
-                <a
-                  href="https://github.com/forcean"
-                  target="_blank"
-                  className="text-lg hover:text-blue-400 transition"
-                >
-                  github.com/forcean
-                </a>
-              </div>
-            </div>
+            <ContactItem
+              icon={<GitBranch />}
+              label="GitHub"
+              value="github.com/forcean"
+              link="https://github.com/forcean"
+            />
 
             {/* linkedin */}
-            <div
-              className="
-                flex items-center gap-5
-                p-5 rounded-2xl
-                bg-white/5 border border-white/10
-                hover:border-blue-400/30
-                transition
-              "
-            >
-              <div
-                className="
-                  w-14 h-14 rounded-2xl
-                  bg-blue-500/20
-                  flex items-center justify-center
-                  text-blue-400
-                "
-              >
-                <Link size={24} />
-              </div>
+            <ContactItem
+              icon={<Link />}
+              label={t("linkedin")}
+              value="linkedin.com/in/annop-srichan"
+              link="https://www.linkedin.com/in/annop-srichan-521211346"
+            />
 
-              <div>
-                <p className="text-sm text-gray-500">LinkedIn</p>
-
-                <a
-                  href="https://www.linkedin.com/in/annop-srichan-521211346"
-                  target="_blank"
-                  className="text-lg hover:text-blue-400 transition"
-                >
-                  linkedin.com/in/annop-srichan
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function ContactItem({
+  icon,
+  label,
+  value,
+  link,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  link?: string;
+}) {
+  return (
+    <div className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-400/30 transition">
+
+      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center text-blue-400">
+        {icon}
+      </div>
+
+      <div>
+        <p className="text-xs sm:text-sm text-gray-500">{label}</p>
+
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            className="text-base sm:text-lg hover:text-blue-400 transition"
+          >
+            {value}
+          </a>
+        ) : (
+          <p className="text-base sm:text-lg">{value}</p>
+        )}
+      </div>
+    </div>
   );
 }

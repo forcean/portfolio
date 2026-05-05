@@ -60,5 +60,18 @@
       "title": "Hackathon",
       "desc": "Collaborating with teams to build innovative solutions under time constraints."
     }
+  },
+  "contact": {
+    "badge": "Available for Work",
+    "title1": "Let's Build",
+    "title2": "Something Amazing",
+    "desc": "I’m currently open to internships, full-time opportunities, freelance projects, and startup collaborations.",
+    "sendEmail": "Send Email",
+    "github": "GitHub",
+    "infoTitle": "Contact Information",
+    "infoSubtitle": "Get In Touch",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn"
   }
 }
