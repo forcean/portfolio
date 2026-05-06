@@ -280,23 +280,80 @@ export default function ProjectDetailClient({
 
       {/* Image Modal */}
       {selectedIndex !== null && (
-        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur flex items-center justify-center">
-          <button onClick={() => setSelectedIndex(null)} className="absolute top-6 right-6 text-white/70 hover:text-white">
-            <X size={32} />
+        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-xl flex items-center justify-center">
+
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black/70 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black/70 to-transparent" />
+
+          {/* Close */}
+          <button
+            onClick={() => setSelectedIndex(null)}
+            className="
+        absolute top-6 right-6 z-10
+        w-12 h-12 rounded-full
+        bg-white/10 backdrop-blur-lg
+        border border-white/20
+        flex items-center justify-center
+        text-white/80 hover:text-white
+        hover:bg-white/20
+        transition-all duration-300
+        hover:scale-110
+      "
+          >
+            <X size={22} />
           </button>
 
-          <button onClick={prevImage} className="absolute left-6 text-white/70 hover:text-white">
-            <ChevronLeft size={50} />
+          {/* Previous */}
+          <button
+            onClick={prevImage}
+            className="
+        absolute left-6 md:left-10 z-10
+        w-14 h-14 rounded-full
+        bg-white/10 backdrop-blur-lg
+        border border-white/20
+        flex items-center justify-center
+        text-white/70 hover:text-white
+        hover:bg-white/20
+        transition-all duration-300
+        hover:scale-110
+      "
+          >
+            <ChevronLeft size={28} />
           </button>
 
-          <button onClick={nextImage} className="absolute right-6 text-white/70 hover:text-white">
-            <ChevronRight size={50} />
+          {/* Next */}
+          <button
+            onClick={nextImage}
+            className="
+        absolute right-6 md:right-10 z-10
+        w-14 h-14 rounded-full
+        bg-white/10 backdrop-blur-lg
+        border border-white/20
+        flex items-center justify-center
+        text-white/70 hover:text-white
+        hover:bg-white/20
+        transition-all duration-300
+        hover:scale-110
+      "
+          >
+            <ChevronRight size={28} />
           </button>
 
-          <img
-            src={project.images[selectedIndex]}
-            className="max-w-[90vw] max-h-[85vh] object-contain rounded-2xl"
-          />
+          {/* Image */}
+          <div className="relative">
+            <img
+              src={project.images[selectedIndex]}
+              className="
+          max-w-[90vw]
+          max-h-[85vh]
+          object-contain
+          rounded-2xl
+          shadow-2xl
+        "
+            />
+
+            <div className="absolute inset-0 rounded-2xl shadow-[0_0_120px_rgba(59,130,246,0.15)] pointer-events-none" />
+          </div>
         </div>
       )}
     </div>
