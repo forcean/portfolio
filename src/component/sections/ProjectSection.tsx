@@ -5,15 +5,18 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "@/src/constants/projects";
 import ProjectCard from "../features/project/ProjectCard";
+import { useTranslations } from "next-intl";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectSection() {
     const container = useRef<HTMLDivElement>(null);
+    const t = useTranslations("projects");
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            /* 🔥 section intro */
+            /* section intro */
             gsap.from(".project-heading", {
                 y: 80,
                 opacity: 0,
@@ -25,7 +28,7 @@ export default function ProjectSection() {
                 },
             });
 
-            /* 🔥 cards animation */
+            /* cards animation */
             gsap.from(".project-item", {
                 y: 120,
                 opacity: 0,
@@ -38,7 +41,7 @@ export default function ProjectSection() {
                 },
             });
 
-            /* 🔥 parallax bg glow */
+            /* parallax bg glow */
             gsap.to(".project-glow", {
                 yPercent: 30,
                 ease: "none",
@@ -59,7 +62,7 @@ export default function ProjectSection() {
             ref={container}
             className="relative overflow-hidden py-32"
         >
-            {/* 🔥 Background */}
+            {/*Background */}
             <div className="absolute inset-0 -z-10">
                 <div className="project-glow absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[140px] rounded-full" />
 
@@ -68,27 +71,25 @@ export default function ProjectSection() {
 
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* 🔥 Heading */}
+                {/*Heading */}
                 <div className="project-heading text-center mb-20">
                     <p className="text-blue-400 uppercase tracking-[0.3em] text-sm mb-4">
-                        Portfolio
+                        {t("header")}
                     </p>
 
                     <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-                        Featured{" "}
+                        {t("title1")}{" "}
                         <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                            Projects
+                            {t("title2")}
                         </span>
                     </h2>
 
                     <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
-                        A collection of full-stack applications, scalable systems,
-                        and modern web experiences built with performance,
-                        maintainability and clean UI in mind.
+                        {t("subtitle")}
                     </p>
                 </div>
 
-                {/* 🔥 Grid */}
+                {/* Grid */}
                 <div className="projects-grid grid lg:grid-cols-2 gap-10">
                     {projects.map((p) => (
                         <div

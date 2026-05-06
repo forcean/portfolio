@@ -61,6 +61,7 @@ export default function ContactPage() {
 
           {/* badge */}
           <div className="contact-reveal inline-flex mx-auto lg:mx-0 items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur text-sm text-gray-300">
+            <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             {t("badge")}
           </div>
 

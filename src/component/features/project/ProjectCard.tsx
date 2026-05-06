@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Project } from "@/src/types/project";
 
 export default function ProjectCard({
@@ -7,6 +10,8 @@ export default function ProjectCard({
 }: {
   project: Project;
 }) {
+  const t = useTranslations("projects");
+
   return (
     <Link href={`/projects/${project.slug}`}>
       <div
@@ -20,7 +25,7 @@ export default function ProjectCard({
         hover:-translate-y-2
       "
       >
-        {/*Glow Hover */}
+        {/* Glow Hover */}
         <div
           className="
           absolute inset-0 opacity-0 group-hover:opacity-100
@@ -33,7 +38,7 @@ export default function ProjectCard({
         <div className="relative overflow-hidden">
           <img
             src={project.images[0]}
-            alt={project.title}
+            alt={t(`items.${project.key}.title`)}
             className="
               w-full h-[260px] object-cover
               transition duration-700
@@ -77,12 +82,12 @@ export default function ProjectCard({
             group-hover:text-blue-400
           "
           >
-            {project.title}
+            {t(`items.${project.key}.title`)}
           </h2>
 
           {/* desc */}
           <p className="text-gray-400 mt-3 leading-relaxed line-clamp-2">
-            {project.desc}
+            {t(`items.${project.key}.shortDesc`)}
           </p>
 
           {/* tech */}
@@ -104,7 +109,7 @@ export default function ProjectCard({
           {/* footer */}
           <div className="mt-6 flex items-center justify-between">
             <span className="text-sm text-gray-500">
-              View Project
+              {t("viewProject")}
             </span>
 
             <div
