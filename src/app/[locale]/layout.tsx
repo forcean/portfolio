@@ -37,7 +37,10 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      data-scroll-behavior="smooth"
+    >
       <body className="bg-[#0B0F19] text-white min-h-screen flex flex-col">
 
         <NextIntlClientProvider locale={locale} messages={messages}>
