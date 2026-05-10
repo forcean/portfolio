@@ -47,20 +47,20 @@
   },
   "activities": {
     "title": "Activities & Experiences",
-    "subtitle": "Exploring creativity, entrepreneurship, leadership, and teamwork beyond coding and software engineering.",
+    "subtitle": "Exploring creativity, entrepreneurship, leadership, and social responsibility beyond software engineering.",
     "startup": {
-      "title": "Startup Competition",
-      "desc": "Pitching startup ideas, validating business models, and presenting solutions to judges."
+      "title": "Startup Thailand League 2026",
+      "desc": "Co-founder of 'Project Morph', recognized as one of the Top 5 teams representing Silpakorn University in the regional business pitching competition."
     },
-    "youtube": {
-      "title": "YouTube Creator",
-      "desc": "Creating educational programming content and sharing development knowledge."
+    "content_creator": {
+      "title": "Lifestyle Content Creator",
+      "desc": "Producing engaging lifestyle content on YouTube and TikTok, focusing on creative digital storytelling and audience engagement strategies."
     },
-    "hackathon": {
-      "title": "Hackathon",
-      "desc": "Collaborating with teams to build innovative solutions under time constraints."
+    "volunteer": {
+      "title": "Nature Conservation & Community Service 2024",
+      "desc": "Represented the Department of Electrical Engineering, Silpakorn University, in a community outreach program to renovate school facilities and support local education at Wat Samut Tharam School, Phetchaburi."
     }
-  },
+},
   "contact": {
     "badge": "Available for Work",
     "title1": "Let's Build",
